@@ -5,9 +5,11 @@ import API from '../api/api';
 const Episode = ({ setSearch }) => {
     const [url, setUrl] = useState();
     const [loading, setLoading] = useState(true);
+    const [name, setName] = useState();
     useEffect(() => {
         setSearch("");
         const title = window.location.pathname.split("/ep/")[1];
+        setName(title);
         API
             .get(`/showUrl?title=${title}&id=frameNewcizgifilmuploads0`)
             .then(res => {
@@ -31,11 +33,12 @@ const Episode = ({ setSearch }) => {
     return (
         <div>
             { loading ? 
-                <div style={{margin:"22%"}}>
+                <div style={{margin:"10%"}}>
                     <Spin />
                 </div> : 
                 
-                <div>
+                <div style={{marginTop:"10%"}}>
+                    <p>{name.replaceAll("-", " ")}</p>
                     <Button type="primary"><a target="blank" href={url}>Click to watch</a></Button>
                 </div>
             }

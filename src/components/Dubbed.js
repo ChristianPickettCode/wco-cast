@@ -23,7 +23,7 @@ const Dubbed = ({ search, setSearch }) => {
     }, []);
 
     useEffect(() => {
-        const result = showList.filter(item => item.title.toLowerCase().includes(search));
+        const result = showList.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
         setSearchList(result);
         return () => {
                 

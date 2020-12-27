@@ -28,7 +28,7 @@ const Stream = () => {
                 
                 <Switch>
                     <Route path="/ep/:title">
-                        <Content style={{ margin:"auto", overflow:"scroll", height:"70vh", width:"250px" }}>
+                        <Content style={{ margin:"auto", overflow:"scroll", height:"70vh", width:"70vw", textDecoration:"underline" }}>
                             <Episode setSearch={setSearch} />
                         </Content>
                     </Route>
