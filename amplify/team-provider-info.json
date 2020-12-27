@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wcocast-dev-231403-authRole",
+      "UnauthRoleArn": "arn:aws:iam::207802189926:role/amplify-wcocast-dev-231403-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::207802189926:role/amplify-wcocast-dev-231403-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-wcocast-dev-231403-deployment",
+      "UnauthRoleName": "amplify-wcocast-dev-231403-unauthRole",
+      "StackName": "amplify-wcocast-dev-231403",
+      "StackId": "arn:aws:cloudformation:us-east-1:207802189926:stack/amplify-wcocast-dev-231403/f6106330-47f9-11eb-9fe4-0a12c74ac309",
+      "AmplifyAppId": "d26k4t4uub0cn"
+    }
+  }
+}
