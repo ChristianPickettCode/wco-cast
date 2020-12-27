@@ -14,7 +14,6 @@ const Show = ({ search, setSearch }) => {
         API
             .get(`/episodeList?genre=anime&title=${title}`)
             .then(res => {
-                console.log(res.data)
                 setShowList(res.data.result);
                 setSearchList(res.data.result);
                 setLoading(false);

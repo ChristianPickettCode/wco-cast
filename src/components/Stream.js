@@ -28,40 +28,40 @@ const Stream = () => {
                 
                 <Switch>
                     <Route path="/ep/:title">
-                        <Content style={{ margin:"auto", overflow:"scroll", height:"500px", width:"250px" }}>
+                        <Content style={{ margin:"auto", overflow:"scroll", height:"70vh", width:"250px" }}>
                             <Episode setSearch={setSearch} />
                         </Content>
                     </Route>
                     <Route path="/show/:title">
                         <Search value={search} placeholder="search..." enterButton onChange={e => setSearch(e.target.value)} onSearch={setSearch} />
                         <Divider />
-                        <Content style={{ margin:"auto", overflow:"scroll", height:"500px" }}>
+                        <Content style={{ margin:"auto", overflow:"scroll", height:"70vh" }}>
                             <Show search={search} setSearch={setSearch} />
                         </Content>
                     </Route>
                     <Route path="/dubbed">
                         <Search value={search} placeholder="search..." enterButton onChange={e => setSearch(e.target.value)} onSearch={setSearch} />
                         <Divider />
-                        <Content style={{ margin:"auto", overflow:"scroll", height:"500px" }}>
+                        <Content style={{ margin:"auto", overflow:"scroll", height:"70vh" }}>
                             <Dubbed search={search} setSearch={setSearch}/>
                         </Content>
                     </Route>
                     <Route path="/subbed">
                         <Search value={search} placeholder="search..." enterButton onChange={e => setSearch(e.target.value)} onSearch={setSearch} />
                         <Divider />
-                        <Content style={{  margin:"auto", overflow:"scroll", height:"500px" }}>
+                        <Content style={{  margin:"auto", overflow:"scroll", height:"70vh" }}>
                             <Subbed search={search} setSearch={setSearch}/>
                         </Content>
                     </Route>
                     <Route path="/cartoons">
                         <Search value={search} placeholder="search..." enterButton onChange={e => setSearch(e.target.value)} onSearch={setSearch} />
                         <Divider />
-                        <Content style={{  margin:"auto", overflow:"scroll", height:"500px" }}>
+                        <Content style={{  margin:"auto", overflow:"scroll", height:"70vh" }}>
                             <Cartoons search={search} setSearch={setSearch}/>
                         </Content>
                     </Route>
                     <Route exact path="/">
-                        <Content style={{  margin:"auto", overflow:"scroll", height:"500px" }}>
+                        <Content style={{  margin:"auto", overflow:"scroll", height:"70vh" }}>
                             <p>watch anime and cartoons online.</p>
                         </Content>
                     </Route>
