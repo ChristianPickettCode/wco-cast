@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 import Cartoons from './Cartoons';
 import Dubbed from './Dubbed';
-import Episode from './Episode';
 import Show from './Show';
 import Subbed from './Subbed';
 
@@ -25,15 +24,8 @@ const Stream = () => {
             />
             
             <Content style={{ margin:"0% auto 2% auto"}}>
-                
                 <Switch>
-                    <Route path="/ep/:title">
-                        <Content style={{ margin:"auto", overflow:"scroll", height:"70vh", width:"70vw", textDecoration:"underline" }}>
-                            <Episode setSearch={setSearch} />
-                        </Content>
-                    </Route>
                     <Route path="/show/:title">
-                        <Search value={search} placeholder="search..." enterButton onChange={e => setSearch(e.target.value)} onSearch={setSearch} />
                         <Divider />
                         <Content style={{ margin:"auto", overflow:"scroll", height:"70vh" }}>
                             <Show search={search} setSearch={setSearch} />
@@ -43,7 +35,7 @@ const Stream = () => {
                         <Search value={search} placeholder="search..." enterButton onChange={e => setSearch(e.target.value)} onSearch={setSearch} />
                         <Divider />
                         <Content style={{ margin:"auto", overflow:"scroll", height:"70vh" }}>
-                            <Dubbed search={search} setSearch={setSearch}/>
+                            <Dubbed search={search} setSearch={setSearch} />
                         </Content>
                     </Route>
                     <Route path="/subbed">
