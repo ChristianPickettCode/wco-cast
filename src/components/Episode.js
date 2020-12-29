@@ -52,13 +52,13 @@ const Episode = ({ showList }) => {
     
     return (
         <div>
+            <p>{ep && ep.replaceAll("-", " ")}</p>
             { loading ? 
                 <div>
                     <Spin />
                 </div> : 
                 
                 <div style={{width:"50vw"}}>
-                    <p>{ep.replaceAll("-", " ")}</p>
                     <Row justify="space-between">
                         { prevEp ? <Button><a href={`/show${prevEp}`}>Previous</a></Button> : <Button>Zero</Button>}
                         <Button type="primary"><a target="blank" href={url}>Click to watch</a></Button>
